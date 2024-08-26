@@ -42,7 +42,7 @@ description.style.fontSize = "25px";
 let allPTags = document.querySelectorAll("textSide p");
 console.log(allPTags);
 
-allPTags[1].style.fontSize = "60px";
+// allPTags[1].style.fontSize = "60px";
 
 function changeParagraphColor() {
   for (let i = 0; i < allPTags.length; i++) {
@@ -51,3 +51,22 @@ function changeParagraphColor() {
 } //END FUNCTION
 
 changeParagraphColor();
+
+//!DOM EVENT LISTENERS
+
+//?Event listeners are waiting for a type of event to fire off("Click, Hover, keydown, etc.") & if the event is cliked the function will run.
+
+let imageElement = document.querySelector(".imageSide img");
+
+let pFirstColumns = document.querySelectorAll(".firstCol p");
+console.log(imageElement);
+console.log(pFirstColumns);
+
+imageElement.addEventListener("click", reColorParagraphs);
+
+function reColorParagraphs() {
+  for (let i = 0; i < pFirstColumns.length; i++) {
+    const currentParagraph = pFirstColumns[i];
+    pFirstColumns[i].style.color = "yellow";
+  }
+}
