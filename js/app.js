@@ -68,5 +68,5 @@ function reColorParagraphs() {
   for (let i = 0; i < pFirstColumns.length; i++) {
     const currentParagraph = pFirstColumns[i];
     pFirstColumns[i].style.color = "yellow";
-  }
-}
+  } //END OF FOR LOOP
+} // END OF FUNCTION
