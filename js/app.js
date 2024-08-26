@@ -32,5 +32,22 @@ let description = document.querySelector(".textSide p:first-child");
 description.innerHTML =
   "Bob Ross was a calm and amazing painter, that chose to die by smoking too much.";
 
-  //* .style give you the option of changing the elements css properties from JavaScript
+//* .style give you the option of changing the elements css properties from JavaScript
 
+description.style.fontSize = "25px";
+
+//! ADDING PROPERTY VALUES TO AN ARR OF NODES;
+//? Males sure when calling a method for
+//?DOM element to only affect one item at a time
+let allPTags = document.querySelectorAll("textSide p");
+console.log(allPTags);
+
+allPTags[1].style.fontSize = "60px";
+
+function changeParagraphColor() {
+  for (let i = 0; i < allPTags.length; i++) {
+    allPTags[i].style.color = "tomato";
+  } //END FOR LOOP
+} //END FUNCTION
+
+changeParagraphColor();
