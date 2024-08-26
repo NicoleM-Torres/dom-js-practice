@@ -70,3 +70,21 @@ function reColorParagraphs() {
     pFirstColumns[i].style.color = "yellow";
   } //END OF FOR LOOP
 } // END OF FUNCTION
+
+let firstName = document.getElementById("fName");
+let signUpButton = document.getElementById("completeSignUp");
+let fNameInfo = "";
+
+//?This event listener will run if a button is pressed
+signUpButton.addEventListener("click", () => {
+  fNameInfo = firstName.ariaValueMax;
+  console.log(fNameInfo);
+});
+
+//?This event listener is constantly watching input changes
+// let fNameInfo = "";
+
+// firstName.addEventListener("input", () => {
+//   fNameInfo = firstName.value;
+//   console.log(fNameInfo);
+// });
